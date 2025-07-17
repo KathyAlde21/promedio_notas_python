@@ -1,32 +1,31 @@
 def pedir_nota(numero):
     while True:
         try:
-            nota = float(input(f"Ingrese la nota {numero} (entre 1 y 7): "))
+            nota = float(input(f"Ingrese la nota {numero} (de 1 a 7): "))
             if 1 <= nota <= 7:
                 return nota
             else:
-                print("⚠️ Error: La nota debe estar entre 1 y 7.")
+                print("⚠️ La nota debe estar entre 1 y 7. Inténtalo de nuevo.")
         except ValueError:
-            print("⚠️ Error: Debes ingresar un número válido.")
+            print("❌ Debes ingresar un número. Inténtalo de nuevo.")
 
-def calcular_promedio():
-    while True:
-        print("\n--- Ingreso de notas del estudiante ---")
-        
-        nota1 = pedir_nota(1)
-        nota2 = pedir_nota(2)
-        nota3 = pedir_nota(3)
-        nota4 = pedir_nota(4)
+while True:
+    # Pedimos las notas con validación
+    nota1 = pedir_nota(1)
+    nota2 = pedir_nota(2)
+    nota3 = pedir_nota(3)
+    nota4 = pedir_nota(4)
 
-        promedio = (nota1 + nota2 + nota3 + nota4) / 4
+    # Calculamos el promedio
+    promedio = (nota1 + nota2 + nota3 + nota4) / 4
 
-        if promedio >= 4.0:
-            print(f"✅ Aprobado con promedio de {promedio:.2f}")
-        else:
-            print(f"❌ Reprobó con promedio de {promedio:.2f}")
+    # Mostramos si aprobó o reprobó
+    if promedio > 4.0:
+        print(f"✅ Aprobado con promedio de {promedio:.2f}")
+    else:
+        print(f"❌ Reprobó con promedio de {promedio:.2f}")
 
-        continuar = input("¿Desea ingresar otro estudiante? (S/N): ").strip().upper()
-        if continuar == "N":
-            break
-
-calcular_promedio()
+    # Preguntamos si se desea continuar
+    continuar = input("¿Desea ingresar otro estudiante? (S/N): ").strip().upper()
+    if continuar == "N":
+        break
