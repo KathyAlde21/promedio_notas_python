@@ -1,6 +1,6 @@
 **_<h1 align="center">:vulcan_salute: Ejercicios Python: Promedio de Notas :computer:</h1>_**
 
-- Ejercicio realizado con lenguaje Python y ChatGPT para cumplir con requerimiento.
+<h2 style="color:blue" align="center"> Ejercicio realizado con lenguaje Python y ChatGPT para cumplir con requerimiento.</h2>
 
 <img src="./img/promedio_vsc.png" alt="" style="width: 40%;"> <img src="./img/promedio_replit.com.png" alt="" style="width: 40%;">
 
